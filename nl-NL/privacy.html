@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacybeleid — Achtergrond Weg</title>
+<meta name="description" content="Achtergrond Weg verwerkt alle beelden op het toestel en verzamelt geen persoonsgegevens.">
+<style>
+:root {
+  color-scheme: light dark;
+  --paper: #efede8;
+  --surface: #f8f7f4;
+  --checker-a: #e6e3dc;
+  --checker-b: #f4f2ed;
+  --ink: #17181a;
+  --ink2: #4c4e54;
+  --hairline: rgba(23, 24, 26, 0.12);
+  --signal: #bd3b1f;
+  --signal-text: #a13017;
+  --signal-soft: rgba(189, 59, 31, 0.09);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121315;
+    --surface: #1b1c1f;
+    --checker-a: #2a2b2f;
+    --checker-b: #222326;
+    --ink: #eceae5;
+    --ink2: #a9abb1;
+    --hairline: rgba(236, 234, 229, 0.14);
+    --signal: #ff6b4d;
+    --signal-text: #ff8269;
+    --signal-soft: rgba(255, 107, 77, 0.14);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16.5px/1.62 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.sweep-rule {
+  position: relative;
+  height: 22px;
+  border-bottom: 1px solid var(--hairline);
+  background: linear-gradient(90deg, #f8f7f4 0 38%, #dcdad4 38% 50%, #e4d9c8 50% 62%, #d4ddd3 62% 74%, #d3dce6 74% 86%, #2a2c30 86% 100%);
+}
+.sweep-rule::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 22px;
+  transform: translateX(-50%);
+  background: var(--signal);
+}
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 20px 68px;
+}
+header.masthead {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+header.masthead img {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid var(--hairline);
+  flex-shrink: 0;
+}
+.kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal-text);
+}
+h1 {
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 750;
+  margin: 4px 0 0;
+  letter-spacing: -0.02em;
+}
+.lede {
+  font-size: 18px;
+  color: var(--ink2);
+  margin: 8px 0 22px;
+}
+nav.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.lang-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 28px;
+}
+.lang-pill {
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  color: var(--ink2);
+  text-decoration: none;
+}
+.lang-pill.active {
+  background: var(--signal-soft);
+  border-color: var(--signal);
+  color: var(--signal-text);
+  font-weight: 600;
+}
+a {
+  color: var(--signal-text);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 32px 0 10px;
+  font-weight: 680;
+}
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 12px 0;
+}
+.panel strong {
+  display: block;
+  margin-bottom: 4px;
+}
+ul, ol {
+  padding-left: 20px;
+}
+li {
+  margin: 7px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  text-align: left;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 15px;
+  vertical-align: top;
+}
+th {
+  width: 32%;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink2);
+}
+tr:last-child th, tr:last-child td { border-bottom: none; }
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 8px;
+}
+.swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  font-size: 12.5px;
+  color: var(--ink2);
+}
+.swatch i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  display: inline-block;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.card {
+  display: block;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 18px;
+  color: var(--ink);
+}
+.card:hover { border-color: var(--signal); }
+.card strong {
+  display: block;
+  font-size: 17px;
+  color: var(--signal-text);
+  margin-bottom: 6px;
+}
+.card span {
+  font-size: 14.5px;
+  color: var(--ink2);
+}
+footer {
+  margin-top: 44px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink2);
+  font-size: 13.5px;
+}
+@media (max-width: 560px) {
+  h1 { font-size: 28px; }
+  main { padding: 24px 16px 52px; }
+  th { width: 38%; }
+}
+
+</style>
+</head>
+<body>
+<div class="sweep-rule" aria-hidden="true"></div>
+<main>
+<header class="masthead">
+  <img src="../app-icon.png" alt="Achtergrond Weg">
+  <div>
+    <div class="kicker">Achtergrond Weg: Productfoto</div>
+    <h1>Privacybeleid</h1>
+  </div>
+</header>
+<p class="lede">Achtergrond Weg verwerkt alle beelden op het toestel en verzamelt geen persoonsgegevens.</p>
+<nav class="top-nav">
+  <a href="../nl-NL/index.html">Overzicht</a>
+  <a href="../nl-NL/help.html">Hulp</a>
+  <a href="../nl-NL/privacy.html">Privacy</a>
+  <a href="https://hayriodabas.github.io/cutout-help/help.html">Cutout EN</a>
+</nav>
+<div class="lang-bar"><a class="lang-pill" href="../en-US/privacy.html" hreflang="en">English</a><a class="lang-pill" href="../de-DE/privacy.html" hreflang="de">Deutsch</a><a class="lang-pill" href="../es-ES/privacy.html" hreflang="es">Español</a><a class="lang-pill" href="../fr-FR/privacy.html" hreflang="fr">Français</a><a class="lang-pill" href="../it/privacy.html" hreflang="it">Italiano</a><a class="lang-pill" href="../ja/privacy.html" hreflang="ja">日本語</a><a class="lang-pill" href="../ko/privacy.html" hreflang="ko">한국어</a><a class="lang-pill active" href="../nl-NL/privacy.html" hreflang="nl">Nederlands</a><a class="lang-pill" href="../pt-BR/privacy.html" hreflang="pt-BR">Português</a><a class="lang-pill" href="../ru/privacy.html" hreflang="ru">Русский</a><a class="lang-pill" href="../tr/privacy.html" hreflang="tr">Türkçe</a><a class="lang-pill" href="../zh-Hans/privacy.html" hreflang="zh-Hans">简体中文</a></div>
+<h2>Kort overzicht</h2>
+<table><tr><th>Beeldverwerking</th><td>Lokaal op het toestel via Apple Vision. Geen serveruploads.</td></tr>
+<tr><th>Fototoegang</th><td>Systeem-fotokiezer bij openen; alleen toevoegrechten bij bewaren.</td></tr>
+<tr><th>Opslag</th><td>Projecten en instellingen blijven lokaal in de app-container.</td></tr>
+<tr><th>Tracking</th><td>Geen analyse-SDK&#x27;s, geen reclame, geen account.</td></tr>
+<tr><th>Aankoop</th><td>Eenmalige ontgrendeling (app.klarwerk.cutout.unlock) via Apple StoreKit.</td></tr></table>
+<div class="panel"><strong>Geen gegevensverzameling</strong>Wij verzamelen, delen of verkopen geen foto&#x27;s, id&#x27;s of gebruiksstatistieken.</div>
+<div class="panel"><strong>Verwijderen</strong>Verwijder opgeslagen bewerkingen via Instellingen of verwijder de app.</div>
+<div class="panel"><strong>Contact</strong>Mail voor privacyvragen naar hayriodabas@gmail.com.</div>
+<section class="panel">
+  <strong>Contact &amp; ondersteuning</strong>
+  Vragen of opmerkingen over Achtergrond Weg: <a href="mailto:hayriodabas@gmail.com">hayriodabas@gmail.com</a>.
+</section>
+<footer>Bijgewerkt 2026-11-25 · app.klarwerk.cutout · Hayri Odabaş</footer>
+</main>
+</body>
+</html>
